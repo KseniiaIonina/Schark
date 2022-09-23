@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,100&display=swap');
+html,
+body,
+main,
+aside,
+.inbox,
+.chat,
+.panel {
+height: 100%
+}
+body {
+    font-family: 'Roboto',
+    sans-serif;
+
+}
+aside {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+
+}
+
+
+
+.menu /* .aside{  */ {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: grey;
+    width: 200px;
+    height: 100%;
+
+}
+.inbox {
+    border-right: 1px solid grey;
+    
+    width: 250px;
+}
+main {
+    position: absolute;
+    top: 0;
+    left: 200px;
+    width: calc(100% - 200px);
+    display: flex;
+}
+.chat {
+    border-right: 1px solid grey;
+    width: calc(100% - 250px - 50px);
+    background: linear-gradient(45deg, black, transparent);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.panel {
+    width: 50px;
+}
+.chat__item {
+    height: 80px;
+    background: blue;
+    /* надо поправить, чтобы отступ был у всех кроме последнего */
+    margin-bottom: 1rem;
+}
+ .container,
+ .messages {
+     height: 90%;
+     overflow-y: scroll; /* добавляет скрол ан странице в этом блоке */ 
+     /* надо поправить, чтобы сделать через  calc 100-высота class inbox */
+
+ }
+ .chat-top,
+ .chat-bottom {
+     height: 60px;
+     background: grey;
+ }
+ .message {
+     height: 20px;
+     
+     margin-bottom: 1rem;
+ }
