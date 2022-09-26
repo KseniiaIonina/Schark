@@ -71,6 +71,12 @@ aside {
      align-items: center;
      justify-content: space-between;
      height: 90%;
+    
+}
+
+.nav__img-active,
+.nav__text-active{
+    color: blue;
 }
 .nav__project-title {
     color: var(--text-lightGrey);
@@ -142,6 +148,7 @@ aside {
 }
 .nav__project-wrap{
     width: 100%;
+    box-sizing: border-box;
 }
 .inbox {
     border-right: 1px solid grey;
