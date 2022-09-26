@@ -19,7 +19,9 @@ height: 100%
     --dark-text: rgb(51,52,55);
     --nav-text: rgb(97, 100, 101);
     --marg-top: 2vw;
+    --margin: 20px;
     --text-lightGrey: #CED1D6;
+    --radius: 8px;
 }
 body {
     font-family: 'Roboto',
@@ -47,7 +49,7 @@ aside {
     background: var(--light-gray);
     width: 200px;
     height: 100%;
-    padding: 0 20px 0 20px;
+    padding: 0 0 0 20px;
     padding-top: var(--marg-top);
 
 }
@@ -73,22 +75,15 @@ aside {
      height: 90%;
     
 }
-.nav__item-active {
-    border-right: 3px solid orange;
-    background-color: white;
-}
-.nav__img-active,
-.nav__text-active{
-    color: blue;
     
-}
 .nav__project-title {
     color: var(--text-lightGrey);
     font-size: 1vw;
-    margin-bottom: var(--marg-top);
+    margin-bottom: 8px;
 }
 .nav_img-menu {
     color: #A5A9B2;
+    margin: 0 5px 0 9px;
 }
 .nav__text-item {
     color: var(--nav-text);
@@ -98,13 +93,29 @@ aside {
 .nav__item {
     margin-bottom: var(--marg-top);
     width: 100%;
-    height: 2vw;
+    height: 2rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  
+}
+.nav__img-active,
+.nav__text-active{
+    color: blue;
+}
+.nav__item:hover,
+.nav__item-active {
+    border-right: 5px solid orange;
+    background-color: white;
+    cursor: pointer;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
 }
 .nav__img{
     width: 15px;
     height: 15px;
     border: 2px solid rgb(218, 115, 88);
-    border-radius: 6px;
+    border-radius: var(--radius);
 }
 .nav__img--blue{
     border: 2px solid rgb(152, 200, 255);
@@ -126,7 +137,7 @@ aside {
     height: 20px;
     background-color: rgb(232, 232, 238);
     border: none;
-    border-radius: 6px;
+    border-radius: var(--radius);
     color: rgb(168, 174, 185);
     font-size: 9px;
 }
@@ -147,7 +158,7 @@ aside {
    border: 1px solid var(--text-lightGrey);
    width:150px ;
    height: 30px;
-   border-radius: 6px;
+   border-radius: var(--radius);
    color: var(--dark-text);
    font-size: 9px;
    margin-bottom: 30px;
@@ -155,10 +166,11 @@ aside {
 .nav__project-wrap{
     width: 100%;
     box-sizing: border-box;
+    padding-right: 20px;
 }
 .inbox {
     border-right: 1px solid grey;
-    padding: 20px 20px 20px 20px;
+    padding: 20px 20px 0 20px;
     width: 250px;
     color: var(--dark-text);
     
@@ -166,7 +178,7 @@ aside {
 .inbox__button{
     background: transparent;
     border: 2px solid var(--light-gray);
-    border-radius: 6px;
+    border-radius: var(--radius);
     width: 35px;
     height: 35px;
     font-size: 20px;
@@ -178,20 +190,21 @@ aside {
 .inbox__title-wrap {
     display: flex;
     justify-content: space-between;
+    margin-bottom: var(--margin);
 }
 .inbox__switcher {
     display: flex;
     background: var(--light-gray);
     border: 1px solid var(--light-gray);
-    border-radius: 5px;
-    margin-bottom: 20px;
+    border-radius: var(--radius);
+    margin-bottom: var(--margin);
    
 }
 .inbox__switcher-button {
     width: 50%;
     height: 35px;
     border: none;
-    border-radius: 5px;
+    border-radius: var(--radius);
     background: transparent;
     color: var(--dark-gray);
 }
@@ -219,17 +232,87 @@ main {
     width: 50px;
 }
 .chat__item {
+    display: flex;
     height: 80px;
-    background: blue;
+    background:var(--light-gray);
     /* надо поправить, чтобы отступ был у всех кроме последнего */
+    justify-content: space-around;
+    align-items: center;
+    border-radius: var(--radius);
+}
+.chat__item:not(:last-child) {
     margin-bottom: 1rem;
+}
+.chat__item--notActive{
+    background: none;
+    border-bottom: 1px solid var(--light-gray);
+    border-radius: none;
+}
+.chat__person {
+    position: relative;
+    
+}
+.person__avatar{
+    width: 50px;
+    height: 50px;
+    border-radius: 13px;
+    background-color: #E3E7E4;
+    
+}
+.marker_avatar--green{
+    width: 10px;
+    height: 10px;
+    background-color: #57CC5D;
+    border:  2px solid white;
+    border-radius: 100%;
+    position: absolute;
+    bottom: 4px;
+    right: 0;
+}
+.chat__img--none{
+    width: 30px;
+    height: 20px  
 }
  .container,
  .messages {
-     height: 90%;
+     height: calc(100% - 110px);
      overflow-y: scroll; /* добавляет скрол ан странице в этом блоке */ 
      /* надо поправить, чтобы сделать через  calc 100-высота class inbox */
 
+ }
+ 
+.chat__text-wrap {
+     width:100px;
+     height: 50px;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     
+     
+ }
+ .chat__text{
+font-size: 11px;
+ }
+ .chat__text--bold{
+     color: var(--dark-text);
+ }
+ .chat__text--lightgray{
+     color: #c7c9cc;
+ }
+ .chat__text--darkgray{
+     color: #949496;
+ }
+
+ .chat__img--blue {
+     display: flex;
+     width: 20px;
+     height: 20px;
+     background-color: #4A6BD9;
+     font-size: 10px;
+     justify-content: center;
+     align-items: center;
+     color: white;
+     border-radius: 100%;
  }
  .chat-top,
  .chat-bottom {

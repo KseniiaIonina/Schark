@@ -16,12 +16,13 @@
             <h3 class="logo__text" >Shark</h3>
         </div>
         
-            <section class="nav">
-                <ul class="nav__list">
-                    <li class="nav__item">
-                        <span class="nav_img-menu"><i class="lab la-buffer"></i></span>
-                        <span class="nav__text-item">Dashboard</span>
-                    </li>
+       <section class="nav">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <span class="nav_img-menu"><i class="lab la-buffer"></i>
+                    </span>
+                    <span class="nav__text-item">Dashboard</span>
+                </li>
                     <li class="nav__item">
                         <span class="nav_img-menu"><i class="las la-chart-area"></i></span>
                         <span class="nav__text-item">Statistic</span>
@@ -30,7 +31,7 @@
                         <span class="nav_img-menu"><i class="las la-comment-alt"></i></span>
                         <span class="nav__text-item">Support</span>
                     </li>
-                    <li class="nav__itemn nav__item-active">
+                    <li class="nav__item nav__item-active">
                         <span class="nav_img-menu nav__img-active"><i class="las la-inbox"></i></span>
                         <span class="nav__text-item nav__text-active">Inbox</span>
                     </li>
@@ -41,8 +42,8 @@
                     <li class="nav__item">
                         <span class="nav_img-menu"><i class="las la-link"></i></span>
                         <span class="nav__text-item">Links</span>
-                    </li>
-                </ul>
+                </li>
+            </ul>
                 <div class="nav__project-wrap">
                 <ul class="nav__project">
                     <h4 class="nav__project-title" >PROJECT</h4>
@@ -77,11 +78,8 @@
                 </ul>
                 <button class="button-nav-project">Show more</button>
                 </div>
-            </section>
+       </section>
            
-      
-
-
     </aside>
   <main>
         <div class="inbox">
@@ -97,19 +95,94 @@
                         <button class="inbox__switcher-button" id="total-btn">Total</button>
                     </div>
             <ul class="container">
-                <li class="chat__item"></li>
-                <li class="chat__item"></li>
-                <li class="chat__item"></li>
-                <li class="chat__item"></li>
-                <li class="chat__item"></li>
-                <li class="chat__item"></li>
-                <li class="chat__item"></li>
-                <li class="chat__item"></li>
-                <li class="chat__item"></li>
-                <li class="chat__item"></li>
-                <li class="chat__item"></li>
+                <li class="chat__item">
+                    <figure class="chat__person">
+                    <img class="person__avatar" src="./image/person.png" alt="">
+                    <div class="marker_avatar--green"></div>    
+                    </figure>
+                    <div class="chat__text-wrap">
+                        <div class="chat__text chat__text--bold">Michael.B</div>
+                        <div class=" chat__text chat__text--lightgray">Project manager</div>
+                        <div class=" chat__text chat__text--darkgray" >Sent you file</div>
+                    </div>
+                    <div class="chat__img--blue">2</div>
 
-                
+                </li>
+                <li class="chat__item">
+                    <figure class="chat__person">
+                        <img class="person__avatar" src="./image/person.png" alt="">
+                        <div class="marker_avatar--green"></div>    
+                     </figure>
+                        <div class="chat__text-wrap">
+                            <div class="chat__text chat__text--bold">Katie.W</div>
+                            <div class=" chat__text chat__text--lightgray">Middle designer</div>
+                            <div class=" chat__text chat__text--darkgray" >See you tomorrow...</div>
+                        </div>
+                        <div class="chat__img--blue">3</div>
+                </li>
+                <li class="chat__item chat__item--notActive">
+                    <figure class="chat__person">
+                    <img class="person__avatar" src="./image/person.png" alt="">
+                    <!-- <div class="marker_avatar--green"></div>     -->
+                    </figure>
+                    <div class="chat__text-wrap">
+                        <div class="chat__text chat__text--bold">Michael.B</div>
+                        <div class=" chat__text chat__text--lightgray">Project manager</div>
+                        <div class=" chat__text chat__text--darkgray" >Sent you file</div>
+                    </div>
+                    <div class="chat__img--none"></div>
+
+                </li>
+                <li class="chat__item chat__item--notActive">
+                    <figure class="chat__person">
+                        <img class="person__avatar" src="./image/person.png" alt="">
+                        <!-- <div class="marker_avatar--green"></div>     -->
+                     </figure>
+                        <div class="chat__text-wrap">
+                            <div class="chat__text chat__text--bold">Katie.W</div>
+                            <div class=" chat__text chat__text--lightgray">Middle designer</div>
+                            <div class=" chat__text chat__text--darkgray" >See you tomorrow...</div>
+                        </div>
+                        <div class="chat__img--none"></div>
+                </li>
+                <li class="chat__item chat__item--notActive">
+                    <figure class="chat__person">
+                        <img class="person__avatar" src="./image/person.png" alt="">
+                        <div class="marker_avatar--green"></div>    
+                     </figure>
+                        <div class="chat__text-wrap">
+                            <div class="chat__text chat__text--bold">Katie.W</div>
+                            <div class=" chat__text chat__text--lightgray">Middle designer</div>
+                            <div class=" chat__text chat__text--darkgray" >See you tomorrow...</div>
+                        </div>
+                        <div class="chat__img--none"></div>
+                </li>
+                <li class="chat__item chat__item--notActive">
+                    <figure class="chat__person">
+                    <img class="person__avatar" src="./image/person.png" alt="">
+                    <!-- <div class="marker_avatar--green"></div>     -->
+                    </figure>
+                    <div class="chat__text-wrap">
+                        <div class="chat__text chat__text--bold">Michael.B</div>
+                        <div class=" chat__text chat__text--lightgray">Project manager</div>
+                        <div class=" chat__text chat__text--darkgray" >Sent you file</div>
+                    </div>
+                    <div class="chat__img--none"></div>
+
+                </li>
+                <li class="chat__item chat__item--notActive">
+                    <figure class="chat__person">
+                        <img class="person__avatar" src="./image/person.png" alt="">
+                        <!-- <div class="marker_avatar--green"></div>     -->
+                     </figure>
+                        <div class="chat__text-wrap">
+                            <div class="chat__text chat__text--bold">Katie.W</div>
+                            <div class=" chat__text chat__text--lightgray">Middle designer</div>
+                            <div class=" chat__text chat__text--darkgray" >See you tomorrow...</div>
+                        </div>
+                        <div class="chat__img--none"></div>
+                </li>
+                 
             </ul>
         </div>
         <div class="chat">

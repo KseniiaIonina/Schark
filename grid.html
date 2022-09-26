@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+html, body, .wrapper {
+            height: 100%;
+            margin: 0;
+         }
+         .wrapper {
+             display: grid;
+             grid-template-columns: 150px 200px auto 100px;
+             grid-template-rows: auto;
+             grid-template-areas: 
+             "aside inbox chat panel"
+            
+         }
+         aside {
+             background: coral;
+             grid-area: aside;
+             
+         }
+         .inbox {
+             background: gold;
+             grid-area: inbox;
+         }
+         .chat {
+             background: lightgray;
+             grid-area: chat;
+         }
+         .panel {
+             background: blue;
+             grid-area: panel;
+         }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        
+        <aside> </aside>
+        <div class="inbox"></div>
+        <div class="chat"></div>
+        <div class="panel"></div>
+    </div>
+</body>
+</html>
