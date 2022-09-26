@@ -12,55 +12,142 @@
 <body>
     <aside class="menu">
         <div class="logo">
-
+           <img class="logo__img" src="./image/icons8-cube-60.png" alt="">
+            <h3 class="logo__text" >Shark</h3>
         </div>
-        <div class="nav"></div>
+        
+            <section class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <span class="nav_img-menu"><i class="lab la-buffer"></i></span>
+                        <span class="nav__text-item">Dashboard</span>
+                    </li>
+                    <li class="nav__item">
+                        <span class="nav_img-menu"><i class="las la-chart-area"></i></span>
+                        <span class="nav__text-item">Statistic</span>
+                    </li>
+                    <li class="nav__item">
+                        <span class="nav_img-menu"><i class="las la-comment-alt"></i></span>
+                        <span class="nav__text-item">Support</span>
+                    </li>
+                    <li class="nav__item">
+                        <span class="nav_img-menu"><i class="las la-inbox"></i></span>
+                        <span class="nav__text-item">Inbox</span>
+                    </li>
+                    <li class="nav__item">
+                        <span class="nav_img-menu"><i class="las la-rocket"></i></span>
+                        <span class="nav__text-item">Goals</span>
+                    </li>
+                    <li class="nav__item">
+                        <span class="nav_img-menu"><i class="las la-link"></i></span>
+                        <span class="nav__text-item">Links</span>
+                    </li>
+                </ul>
+                <div class="nav__project-wrap">
+                <ul class="nav__project">
+                    <h4 class="nav__project-title" >PROJECT</h4>
+                    <li class="nav__project-list" >
+                        <div class="project__list-wrap">
+                            <div class="nav__img nav__img--orange" ></div>
+                            <span class="nav__project-item" >Callipso</span>
+                        </div>
+                        <button class="button__project">+4</button>
+                    </li>
+                    <li class="nav__project-list">
+                        <div class="project__list-wrap">
+                           <div class="nav__img nav__img--blue" ></div>
+                           <span class="nav__project-item" >BWS bank</span> 
+                        </div>
+                        <button class="button__project">+5</button>
+                    </li>
+                    <li class="nav__project-list">
+                        <div class="project__list-wrap">
+                         <div class="nav__img nav__img--violet" ></div>
+                         <span class="nav__project-item" >Unicorn app<span> 
+                        </div>
+                       <button class="button__project">+1</button> 
+                    </li>
+                    <li class="nav__project-list">
+                        <div class="project__list-wrap">
+                          <div class="nav__img nav__img--green" ></div>
+                          <span class="nav__project-item" >Salt</span> 
+                        </div>
+                        <button class="button__project">+3</button> 
+                    </li>
+                </ul>
+                <button class="button-nav-project">Show more</button>
+                </div>
+            </section>
+           
+      
 
 
     </aside>
-    <main>
-<div class="inbox">
-    <div>
-        inbox
-    </div>
-    <div>
-        <span>General</span>
-        <span>Total</span>
-    </div>
-    <ul class="container">
-        <li class="chat__item"></li>
-        <li class="chat__item"></li>
-        <li class="chat__item"></li>
-        <li class="chat__item"></li>
-        <li class="chat__item"></li>
-        <li class="chat__item"></li>
-        <li class="chat__item"></li>
-        <li class="chat__item"></li>
-        <li class="chat__item"></li>
-        <li class="chat__item"></li>
-        <li class="chat__item"></li>
+  <main>
+        <div class="inbox">
+            <div class="inbox__title-wrap">
+                    <h2 class="inbox__title">
+                        Inbox
+                    </h2>
+                    <button class="inbox__button" type="button" ><i class="las la-plus"></i></button>
+                    
+            </div>    
+                   <div class="inbox__switcher">
+                        <button class="inbox__switcher-button inbox__switcher-button--active" id="general-btn">General</button>
+                        <button class="inbox__switcher-button" id="total-btn">Total</button>
+                    </div>
+            <ul class="container">
+                <li class="chat__item"></li>
+                <li class="chat__item"></li>
+                <li class="chat__item"></li>
+                <li class="chat__item"></li>
+                <li class="chat__item"></li>
+                <li class="chat__item"></li>
+                <li class="chat__item"></li>
+                <li class="chat__item"></li>
+                <li class="chat__item"></li>
+                <li class="chat__item"></li>
+                <li class="chat__item"></li>
 
-        
-    </ul>
-</div>
-<div class="chat">
-    <div  class="chat-top"></div>
-    <div class="messages">
-        <div class="message"></div>
-        <div class="message"></div>
-        <div class="message"></div>
-        <div class="message"></div>
-        <div class="message"></div>
-        <div class="message"></div>
-        <div class="message"></div>
-        <div class="message"></div>
-        <div class="message"></div>
-        <div class="message"></div>
-    </div>
-    <div class="chat-bottom"></div>
-</div>
-<div class="panel"></div>
-    </main>
-   
+                
+            </ul>
+        </div>
+        <div class="chat">
+            <div  class="chat-top"></div>
+            <div class="messages">
+                <div class="message"></div>
+                <div class="message"></div>
+                <div class="message"></div>
+                <div class="message"></div>
+                <div class="message"></div>
+                <div class="message"></div>
+                <div class="message"></div>
+                <div class="message"></div>
+                <div class="message"></div>
+                <div class="message"></div>
+            </div>
+            <div class="chat-bottom"></div>
+        </div>
+        <div class="panel">
+
+        </div>
+  </main>
+  <script>
+      var  generalBtn = document.getElementById('general-btn');
+var  totalBtn = document.getElementById('total-btn');
+
+generalBtn.addEventListener("click", function(evt) {
+    console.log(evt.target);
+    generalBtn.classList.toggle('inbox__switcher-button--active');
+    totalBtn.classList.toggle('inbox__switcher-button--active');
+});
+
+totalBtn.addEventListener("click", function(evt) {
+    console.log(evt.target);
+    generalBtn.classList.toggle('inbox__switcher-button--active');
+    totalBtn.classList.toggle('inbox__switcher-button--active');
+});
+  </script> 
+
 </body>
 </html>
