@@ -97,8 +97,8 @@
             <ul class="container">
                 <li class="chat__item">
                     <figure class="chat__person">
-                    <img class="person__avatar" src="./image/person.png" alt="">
-                    <div class="marker_avatar--green"></div>    
+                    <img class="person__avatar" src="./image/face_PNG11760.png" alt="">
+                     <div class="marker_avatar--green"></div>    
                     </figure>
                     <div class="chat__text-wrap">
                         <div class="chat__text chat__text--bold">Michael.B</div>
@@ -185,25 +185,51 @@
                  
             </ul>
         </div>
-        <div class="chat">
-            <div  class="chat-top"></div>
+        <section class="chat">
+            <div  class="chat-top">
+                <div class="chat__top-wrap">
+                   <figure class="chat__person chat__person--little">
+                        <img class="person__avatar person_img--little" src="./image/face_PNG11760.png" alt="">
+                        <div class="marker_avatar--green"></div>    
+                    </figure>
+                    <div class="chat__text-wrap chat__text-size">
+                        <div class="chat__text chat__text--bold">Michael.B</div>
+                        <div class=" chat__text chat__text--lightgray">Online</div>
+                    </div>
+                </div>
+                <div class="chat__top-wrap">
+                    <form class="search__wrap">
+                        <input type="text"  id=""     placeholder="Search" class="search__form">
+                         <span class="icon__search"><i class="las la-search"></i></span>
+                    </form>
+                        <button class="button__chat-top"><i class="las la-microphone"></i></button>
+                    <button class="button__chat-top"><i class="las la-camera"></i></button>
+                
+                </div>
+
+            </div>
             <div class="messages">
-                <div class="message"></div>
-                <div class="message"></div>
-                <div class="message"></div>
-                <div class="message"></div>
-                <div class="message"></div>
-                <div class="message"></div>
+                <div class="message">July 29, Tuesday</div>
+                <time class="message">12:25</time>
+                <div class="message">Hello</div>
+                <div class="message"><img src="./image/audio1.png" alt=""></div>
+                <div class="message">VIEWED AT</div>
+                <time class="message">12:28</time>
                 <div class="message"></div>
                 <div class="message"></div>
                 <div class="message"></div>
                 <div class="message"></div>
             </div>
             <div class="chat-bottom"></div>
-        </div>
-        <div class="panel">
-
-        </div>
+        </section>
+        <footer class="panel">
+                <button class="button__footer"><i class="las la-ellipsis-h"></i></button>
+            <div class="panel__bottom">
+                <button class="button__footer"><i class="las la-exclamation-circle"></i></button>
+                <button class="button__footer"><i class="las la-microphone-slash"></i></button>
+                <button class="button__footer"><i class="las la-trash"></i></button>
+            </div>
+        </footer>
   </main>
   <script>
       var  generalBtn = document.getElementById('general-btn');
