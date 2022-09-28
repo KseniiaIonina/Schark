@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shark App</title>
+
+    <link
+      rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+    />
+
+    <style>
+      html,
+      body,
+      .wrapper {
+        height: 100%;
+      }
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .wrapper {
+        display: grid;
+        grid-template-columns: 100px 150px auto 50px;
+        grid-template-areas: "aside inbox chat panel";
+      }
+      aside {
+        grid-area: aside;
+        background: lightblue;
+      }
+      .inbox {
+        grid-area: inbox;
+        background: coral;
+      }
+      .panel {
+        grid-area: panel;
+        background: lightgray;
+      }
+      .chat {
+        grid-area: chat;
+        background: #fff;
+        display: grid;
+        grid-template-rows: 150px auto 150px;
+      }
+      .messages {
+        border-bottom: 2px solid grey;
+        border-top: 2px solid grey;
+      }
+      .header {
+        padding: 50px;
+      }
+      .search {
+        background: lightgray;
+        width: 270px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+      }
+      .search__input {
+        background: none;
+        border: none;
+        padding: 1rem;
+        font-size: 1rem;
+      }
+      .search__input:focus {
+        outline: none;
+      }
+      .search__button {
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+      }
+      .messages {
+        padding: 5rem;
+      }
+      .item {
+        padding: 20px;
+        border-radius: 16px;
+        width: 450px tyt;
+        background: gold;
+        display: grid;
+        grid-template-columns: 150px200px 100px;
+      }
+      .avatar-container {
+        line-height: 0;
+        width: 92px;
+        aspect-ratio: 1;
+        position: relative;
+      }
+      .avatar {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 24px;
+      }
+      .online {
+        background: lightgreen;
+        width: 15px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        border: 3px solid #fff;
+        position: absolute;
+        right: 5px;
+        bottom: 5px;
+      }
+      .last-message {
+          /*Должно быть ограничение по размерам  1отменяет перенос на новую строчку 2. скрывать если выходят за границы контейнера 3. ставит 3точие */
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          width: 250px;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <aside></aside>
+      <div class="inbox"></div>
+
+      <div class="chat">
+        <div class="header">
+          <div class="search">
+            <input class="search__input" type="text" placeholder="Search.." />
+
+            <button class="search__button">
+              <i class="las la-search"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="messages">
+
+          <div class="item">
+            <div class="image">
+              <figure class="avatar-container">
+                <img
+                  src="https://via.placeholder.com/150x300"
+                  alt=""
+                  class="avatar"
+                />
+
+                <div class="online"></div>
+              </figure>
+            </div>
+
+            <div class="info">
+                <p class="last-message">
+                    Lorem ipsum
+                </p>
+            </div>
+
+            <div>
+                <div class="indicator"></div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="send-block"></div>
+      </div>
+
+      <div class="panel"></div>
+    </div>
+  </body>
+</html>
