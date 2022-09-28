@@ -53,6 +53,7 @@ aside {
     height: 100%;
     padding: 0 0 0 20px;
     padding-top: var(--marg-top);
+    transition: all .8s ease-out;
 
 }
 .logo {
@@ -529,6 +530,56 @@ height: 30px;
     display: flex;
     align-items: center;
     width: 30%;
-    justify-content: space-evenly;
+    justify-content: flex-end;
     height: 100%;
+}
+.button__img-chat{
+    margin: 0 8px;
+}
+.burger {
+    display: none;
+    transition: all 0.8s ease-out;
+}
+@media(max-width: 768px){
+aside,
+.inbox,
+.panel {
+    display: none;
+}
+.wrapper {
+    display: block;
+}
+.chat {
+    width: 80%;
+    /* margin: 0; */
+}
+.button__media{
+    background: rgb(232, 232, 238);
+    border: 3px solid var(--text-lightGreyy);
+    width: 40px;
+    height: 80px;
+    border-radius: 8px;
+    
+}
+button{
+    border: none;
+    background: transparent;
+}
+.burger{
+    display: inline;
+    position: fixed;
+    top: 50%;
+    left: 0;
+    z-index: 1;
+}
+.menu--open {
+    transform: none;
+}
+.menu{
+    transform: translateX(calc(200px)*-1);
+    z-index: 1;
+}
+.burger--open{
+    transform: translateX(200px);
+}
 }
